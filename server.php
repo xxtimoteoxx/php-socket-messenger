@@ -3,7 +3,7 @@
 set_time_limit(0);
 
 //Set variables such as "host" and "port"
-$ip = '127.0.0.1';
+$host = '127.0.0.1';
 $port = 5353; // Port number can be any positive integer between 1024 -65535.
 
 // Create socket
@@ -13,7 +13,7 @@ if(!$socket) {
 }
 
 // Bind the socket to port and host
-$result = socket_bind($socket,$ip,$port);
+$result = socket_bind($socket,$host,$port);
 if(!$result) {
     echo "socket_bind() Fail to bind:".socket_strerror($result)."\n";
 }
